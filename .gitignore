@@ -1,0 +1,2 @@
+# Ignore local JavaScript dependencies
+node_modules
