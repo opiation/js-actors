@@ -8,7 +8,8 @@ Can we get a _functioning_ actor model implementation in the browser? Can some o
 
 ## Roadmap
 
-- [ ] An actor can be spawned with a given message handler to process incoming messages
-- [ ] An actor can send messages to another actor using its address
-- [ ] An actor can receive messages and be sent messages
-- [ ] Use the main event loop for scheduling actors, maybe using `requestAnimationFrame` or `setTimeout` or something
+- [x] An actor can be spawned with a given message handler to process incoming messages and an initial state
+- [x] An actor can send messages to another actor using its address and/or using and actor handle
+- [x] An actor can receive messages and be sent messages
+- [x] Use the main event loop for scheduling actors using or `setTimeout`
+- [ ] Track changes in internal actor status (e.g.: idle, processing, terminated, etc.)

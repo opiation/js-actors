@@ -95,6 +95,10 @@ declare namespace Actors {
       current: State,
       previous: State,
     ): void;
+    onActorStatusChanged<Status extends string = string>(
+      actor: ActorAddress,
+      newStatus: Status,
+    ): void;
     onActorMessageSent(sentMessage: unknown, sender: ActorAddress): void;
   }
 
@@ -121,4 +125,10 @@ declare namespace Actors {
     current: State,
     incoming: AcceptedMessage,
   ) => State | Promise<State>;
+
+  const enum Status {
+    Idle = "idle",
+    Processing = "processing",
+    Waiting = "waiting",
+  }
 }
